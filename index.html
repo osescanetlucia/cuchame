@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light only"></head><body>
 <title>Cuchame</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fredoka:wght@400;500;600&display=swap">
@@ -14,18 +14,7 @@
   --font-display:'Fredoka','Trebuchet MS',system-ui,sans-serif; --font-body:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
   --radius:28px;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#1F2124; --surface:#2A2C30; --fg:#F2F2EE; --muted:#C6C6BF; --heading:#B7DB9A; --line:#3E4045; --brown:#C89A6A;
-    --primary:#D9A25F; --mostaza:#E3B23C; --on-primary:#1D2216; --wa:#4ADE80; --on-wa:#0E1A10; --notice-bg:#3A3320; --notice-line:#C9955D;
-    --accent-soft:#4A4036; --logo-filter:brightness(0) invert(.94); color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#1F2124; --surface:#2A2C30; --fg:#F2F2EE; --muted:#C6C6BF; --heading:#B7DB9A; --line:#3E4045; --brown:#C89A6A;
-  --primary:#D9A25F; --mostaza:#E3B23C; --on-primary:#1D2216; --wa:#4ADE80; --on-wa:#0E1A10; --notice-bg:#3A3320; --notice-line:#C9955D;
-  --accent-soft:#4A4036; --logo-filter:brightness(0) invert(.94); color-scheme:dark;
-}
+html{color-scheme:light only;background:#F5F5F3}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:17px;line-height:1.6;padding-block:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
@@ -360,6 +349,11 @@ footer p{color:var(--muted);font-size:14px;max-width:34em}
 
 @media (max-width:860px){
   .doors{grid-template-columns:1fr;padding-block:28px 52px}
+  .doors{gap:16px;padding-block:20px 44px}
+  .door{flex-direction:row;align-items:center;gap:14px;padding:14px;border-radius:32px}
+  .door .pet-art{flex:0 0 min(46%,260px);aspect-ratio:1/1;border-radius:22px}
+  .door .door-text{flex:1;min-width:0;padding-inline:0;align-items:center}
+  .door .go{font-size:17px;min-height:48px;padding-inline:18px;align-self:center;white-space:nowrap}
   .pet-hero{grid-template-columns:1fr;padding:28px;gap:28px;border-radius:36px}
   .about{grid-template-columns:1fr;gap:28px}
   .section{padding-block:48px}
